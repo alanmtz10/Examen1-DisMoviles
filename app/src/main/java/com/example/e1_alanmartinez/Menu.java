@@ -35,28 +35,20 @@ public class Menu extends AppCompatActivity {
                 intent.setClass(Menu.this, Video.class);
                 break;
             case R.id.btn_acerca:
+                showAlertDialog("Acerca de", "Martinez Mejia Alan Jaziel\n15280815\n\nDispositivos Móviles", false);
+                activity = false;
                 break;
             case R.id.btn_mas:
                 intent.setClass(Menu.this, Mas.class);
                 break;
             case R.id.btn_gps:
                 intent.setClass(Menu.this, Mapa.class);
+                System.out.println("sadasdsadadsadasd");
                 break;
             default:
+                this.showAlertDialog("Salir", "¿Salir de la aplicacion?", true);
                 activity = false;
-                System.out.println("Saliendo");
-                new AlertDialog.Builder(Menu.this)
-                        .setIcon(R.drawable.ic_launcher_background)
-                        .setTitle("Salir")
-                        .setMessage("¿Salir de la aplicacion?")
-                        .setPositiveButton("Si", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                finish();
-                            }
-                        })
-                        .setNegativeButton("No", null)
-                        .show();
+
         }
 
         if (activity) {
@@ -68,5 +60,23 @@ public class Menu extends AppCompatActivity {
     protected void onDestroy() {
         Toast.makeText(Menu.this, "Saliendo de la aplicacion", Toast.LENGTH_LONG).show();
         super.onDestroy();
+    }
+
+    private void showAlertDialog(String title, String message, boolean buttons) {
+        AlertDialog.Builder alert = new AlertDialog.Builder(Menu.this)
+                .setIcon(R.drawable.i01)
+                .setTitle(title)
+                .setMessage(message);
+        if (buttons) {
+            alert.setPositiveButton("Si", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    finish();
+                }
+            });
+            alert.setNegativeButton("No", null);
+        }
+
+        alert.show();
     }
 }

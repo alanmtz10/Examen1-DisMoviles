@@ -8,13 +8,16 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import javax.script.ScriptEngine;
+import javax.script.ScriptEngineManager;
+
 public class MainActivity extends AppCompatActivity {
 
     private EditText email;
     private EditText password;
 
-    private String user = "a";
-    private String pass = "a";
+    private String user = "admin@admin.com";
+    private String pass = "admin";
 
 
     @Override

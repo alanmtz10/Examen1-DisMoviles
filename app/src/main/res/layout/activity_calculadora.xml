@@ -55,7 +55,6 @@
         android:id="@+id/tv_res"
         android:layout_width="0dp"
         android:layout_height="40dp"
-        android:text="@string/textview"
         app:layout_constraintEnd_toStartOf="@+id/guideline7"
         app:layout_constraintStart_toStartOf="@+id/guideline6"
         app:layout_constraintTop_toBottomOf="@+id/etv_ope" />
@@ -254,10 +253,13 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent" >
 
-            <Space
+            <Button
+                android:id="@+id/btn_fac"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:onClick="attachSpecial"
+                android:text="!" />
 
             <Button
                 android:id="@+id/btn_1"
@@ -296,17 +298,11 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent" >
 
-            <Space
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_span="1"
-                android:layout_weight="1" />
-
             <Button
                 android:id="@+id/btn_igu"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_span="1"
+                android:layout_span="3"
                 android:layout_weight="1"
                 android:onClick="solve"
                 android:text="=" />
@@ -315,7 +311,6 @@
                 android:id="@+id/btn_pun"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_span="1"
                 android:layout_weight="1"
                 android:onClick="attachNumberOrOperation"
                 android:text="." />
@@ -324,7 +319,6 @@
                 android:id="@+id/btn_0"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_span="1"
                 android:layout_weight="1"
                 android:onClick="attachNumberOrOperation"
                 android:text="0" />
@@ -333,7 +327,6 @@
                 android:id="@+id/btn_mas"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_span="1"
                 android:layout_weight="1"
                 android:onClick="attachNumberOrOperation"
                 android:text="+" />

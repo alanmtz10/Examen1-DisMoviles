@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.net.Uri;
 import android.os.Bundle;
+import android.widget.MediaController;
 import android.widget.VideoView;
 
 public class Video extends AppCompatActivity {
@@ -17,7 +18,14 @@ public class Video extends AppCompatActivity {
 
         video = findViewById(R.id.videoView);
 
-        video.setVideoURI(Uri.parse("https://www.youtube.com/watch?v=oIhCyPaDP6g"));
+        Uri uri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.video);
+
+        video.setVideoURI(uri);
+
+        MediaController mediaController = new MediaController(this);
+        video.setMediaController(mediaController);
+        mediaController.setAnchorView(video);
+
         video.start();
     }
 }

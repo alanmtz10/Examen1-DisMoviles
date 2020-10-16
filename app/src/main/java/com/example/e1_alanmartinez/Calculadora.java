@@ -95,15 +95,6 @@ public class Calculadora extends AppCompatActivity {
     }
 
     public void removeFromOperation(View view) {
-//        switch (view.getId()) {
-//            case R.id.btn_bb:
-////                this.visibleOperation = !this.visibleOperation.equals("") ? this.visibleOperation.substring(0, this.visibleOperation.length() - 1) : "";
-//                break;
-//            default:
-//                this.visibleOperation = "";
-//                this.jsOperation = "";
-//        }
-
         this.visibleOperation = "";
         this.jsOperation = "";
 

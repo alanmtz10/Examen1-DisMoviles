@@ -27,8 +27,6 @@ public class Web extends AppCompatActivity {
 
     public void visitUrl(View v) {
 
-        System.out.println("asdasdsad");
-
         String currentUrl = url.getText().toString();
 
         if (!currentUrl.equals("") && Patterns.WEB_URL.matcher(currentUrl).matches()) {

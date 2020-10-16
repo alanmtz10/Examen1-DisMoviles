@@ -50,14 +50,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:drawableTop="@drawable/ic_calc"
                 android:onClick="changeActivity"
-                android:text="@string/calculadora" />
+                android:text="@string/calculadora"
+                android:textSize="14sp" />
 
             <Button
                 android:id="@+id/btn_imagenes"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:drawableTop="@drawable/ic_images"
                 android:onClick="changeActivity"
                 android:text="@string/imagenes" />
         </TableRow>
@@ -71,6 +74,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:drawableTop="@drawable/ic_web"
                 android:onClick="changeActivity"
                 android:text="@string/web" />
 
@@ -79,6 +83,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:drawableTop="@drawable/ic_video"
                 android:onClick="changeActivity"
                 android:text="@string/video" />
         </TableRow>
@@ -92,6 +97,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:drawableTop="@drawable/ic_about"
                 android:onClick="changeActivity"
                 android:text="@string/acercaDe" />
 
@@ -100,6 +106,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:drawableTop="@drawable/ic_more"
                 android:onClick="changeActivity"
                 android:text="@string/mas" />
         </TableRow>
@@ -113,6 +120,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:drawableTop="@drawable/ic_gps"
                 android:onClick="changeActivity"
                 android:text="@string/gbs" />
 
@@ -121,6 +129,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:drawableTop="@drawable/ic_exit"
                 android:onClick="changeActivity"
                 android:text="@string/salir" />
 
